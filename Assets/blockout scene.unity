@@ -1508,6 +1508,7 @@ GameObject:
   - component: {fileID: 347554514}
   - component: {fileID: 347554516}
   - component: {fileID: 347554515}
+  - component: {fileID: 347554517}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -1562,6 +1563,39 @@ MonoBehaviour:
   RomeoAudioSource: {fileID: 145871960}
   OtherAudioSource: {fileID: 810378548}
   AudioVolume: 1
+--- !u!114 &347554517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 347554513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951943de387efcc45a15b90fffc47c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelImage: {fileID: 1018861699}
+  introStoryLines:
+  - {fileID: 8300000, guid: 37230702f0bfe7b4a9a387b6022bef20, type: 3}
+  - {fileID: 8300000, guid: 12f1762fc038d664db38f537cd55b6cb, type: 3}
+  - {fileID: 8300000, guid: f10430334aec8004183e527d6cf77676, type: 3}
+  - {fileID: 8300000, guid: 7ad800ba0fc3f6f4c9a874850081361b, type: 3}
+  - {fileID: 8300000, guid: 9410919a161f50d46b214cef75565d59, type: 3}
+  - {fileID: 8300000, guid: 7b69bd7bfd939b04493e0d1caf7493ca, type: 3}
+  marketStoryLines:
+  - {fileID: 8300000, guid: 377b81f3b4d223d4dacddd6af0839a1c, type: 3}
+  - {fileID: 8300000, guid: 042b49561ed61d243a3faee630b75029, type: 3}
+  - {fileID: 8300000, guid: 73d9e90c408179645aa714d5b0476ed9, type: 3}
+  - {fileID: 8300000, guid: 340b1ca756acad147a3965a7b1e0e858, type: 3}
+  outroStoryLines:
+  - {fileID: 8300000, guid: 28ca87fdd70c61f41ad86851185960ec, type: 3}
+  - {fileID: 8300000, guid: b0b50bcabdaa84f4186a6f71209557c6, type: 3}
+  - {fileID: 8300000, guid: a4b66c4289e9a8640960e341f8f7c462, type: 3}
+  - {fileID: 8300000, guid: 8cdb0907638fbac4dbba4c9e7e7644f2, type: 3}
+  - {fileID: 8300000, guid: f8046e4a20a71dd42b661e6ee1b68d91, type: 3}
+  - {fileID: 8300000, guid: c7a12534649e4e449a033faf66bbcf7c, type: 3}
+  - {fileID: 8300000, guid: 94c1505518cc7934eb4ea3e0bb425bcf, type: 3}
 --- !u!1 &356039422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,6 +2827,11 @@ PrefabInstance:
       propertyPath: blockerID
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5024822315847737005, guid: a7456ea7fefb56847b9474f8991b82fb,
+        type: 3}
+      propertyPath: narrativeLine
+      value: 
+      objectReference: {fileID: 8300000, guid: 4380e0694c56240469ceff707e36f02b, type: 3}
     - target: {fileID: 5024822315847737005, guid: a7456ea7fefb56847b9474f8991b82fb,
         type: 3}
       propertyPath: hasBlockingEvent
@@ -4930,7 +4969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5070,7 +5109,7 @@ PrefabInstance:
     - target: {fileID: 5024822315847737004, guid: a7456ea7fefb56847b9474f8991b82fb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.56
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 5024822315847737004, guid: a7456ea7fefb56847b9474f8991b82fb,
         type: 3}
@@ -5080,7 +5119,7 @@ PrefabInstance:
     - target: {fileID: 5024822315847737004, guid: a7456ea7fefb56847b9474f8991b82fb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.63
+      value: 19.75
       objectReference: {fileID: 0}
     - target: {fileID: 5024822315847737004, guid: a7456ea7fefb56847b9474f8991b82fb,
         type: 3}
@@ -5117,6 +5156,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5024822315847737005, guid: a7456ea7fefb56847b9474f8991b82fb,
+        type: 3}
+      propertyPath: narrativeLine
+      value: 
+      objectReference: {fileID: 8300000, guid: cf19150c5eedebc439e98b0e8248761e, type: 3}
     - target: {fileID: 5024822315847737005, guid: a7456ea7fefb56847b9474f8991b82fb,
         type: 3}
       propertyPath: hasBlockingEvent

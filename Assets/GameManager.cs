@@ -13,9 +13,12 @@ public class GameManager : MonoBehaviour
 
     public bool playerHasPoison = false;
 
+    private StoryManager storyManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        storyManager = this.gameObject.GetComponent<StoryManager>();
         player = GameObject.FindGameObjectWithTag("Player");
         respawnLocation = player.transform.position;
 
@@ -23,6 +26,8 @@ public class GameManager : MonoBehaviour
         {
             blocker.SetActive(false);
         }
+
+        storyManager.PlayIntroStoryAudio();
     }
 
     public void BlockPath(int id)
