@@ -7,6 +7,12 @@ public interface Itriggerable
     void TriggerEvent();
 }
 
+public enum PickUpTypes
+{
+    Poison,
+    Document
+}
+
 public class Interfaces
 {
     

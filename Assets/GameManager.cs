@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int timesFellOffMap { get { return fallCounter; } }
     private int fallCounter;
 
+    public bool playerHasPoison = false;
+
     // Start is called before the first frame update
     void Start()
     {
