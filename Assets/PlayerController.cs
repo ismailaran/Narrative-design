@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0;
 
     private GameManager gameManager;
+    private StoryManager storyManager;
+
     private TombeInteraction tempInteraction;
     private PickupController currentPickup;
     private bool canInteract = false;
@@ -24,12 +26,14 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public bool canMove = true;
 
+
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         playerCamera = Camera.main;
         gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
+        storyManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<StoryManager>();
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -61,13 +65,10 @@ public class PlayerController : MonoBehaviour
         characterController.Move(moveDirection * Time.deltaTime);
 
         // Player and Camera rotation
-        if (canMove)
-        {
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-        }
 
         //interactions
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
@@ -80,6 +81,7 @@ public class PlayerController : MonoBehaviour
                     Destroy(currentPickup.gameObject);
                     interactionText.gameObject.SetActive(false);
                     currentPickup = null;
+                    storyManager.PlayMarketStoryAudio();
                 }
             }
             else if(tempInteraction != null)
