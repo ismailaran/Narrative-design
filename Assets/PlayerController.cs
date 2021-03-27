@@ -113,6 +113,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+        if(other.gameObject.tag == "NarrativeTrigger")
+        {
+            other.gameObject.GetComponent<TriggerNodeInfo>().InvokeTrigger();
+        }
     }
 
     private void OnTriggerStay(Collider other)

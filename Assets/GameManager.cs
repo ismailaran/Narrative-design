@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
     private StoryManager storyManager;
 
+    private bool hasStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +28,15 @@ public class GameManager : MonoBehaviour
         {
             blocker.SetActive(false);
         }
+    }
 
-        storyManager.PlayIntroStoryAudio();
+    private void Update()
+    {
+        if (!hasStarted)
+        {
+            storyManager.PlayIntroStoryAudio();
+            hasStarted = true;
+        }
     }
 
     public void BlockPath(int id)

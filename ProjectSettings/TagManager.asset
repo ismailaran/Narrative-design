@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Pickup
   - Interactable
+  - NarrativeTrigger
+  - ObjectsParent
   layers:
   - Default
   - TransparentFX
