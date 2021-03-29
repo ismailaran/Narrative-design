@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerController : MonoBehaviour
+public class PlayerTest : MonoBehaviour
 {
     [SerializeField] private float walkingSpeed = 7.5f;
     [SerializeField] private float gravity = 20.0f;
@@ -15,25 +14,15 @@ public class PlayerController : MonoBehaviour
     public Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
 
-    private GameManager gameManager;
-    private StoryManager storyManager;
-
-    private TombeInteraction tempInteraction;
-    private PickupController currentPickup;
-    private bool canInteract = false;
-
-    [SerializeField] private Text interactionText;
-
     [HideInInspector] public bool canMove = true;
     [SerializeField] private Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         playerCamera = Camera.main;
-        gameManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-        storyManager = GameObject.FindGameObjectWithTag("GameController").GetComponent<StoryManager>();
 
         // Lock cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -68,37 +57,14 @@ public class PlayerController : MonoBehaviour
 
         // Player and Camera rotation
         rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-
-        //interactions
-        if (Input.GetKeyDown(KeyCode.E) && canInteract)
-        {
-            if (currentPickup != null)
-            {
-                if(currentPickup.pickupType == PickUpTypes.Poison)
-                {
-                    gameManager.playerHasPoison = true;
-                    Destroy(currentPickup.gameObject);
-                    interactionText.gameObject.SetActive(false);
-                    currentPickup = null;
-                    storyManager.PlayMarketStoryAudio();
-                }
-            }
-            else if(tempInteraction != null)
-            {
-                Destroy(tempInteraction.gameObject.GetComponent<SphereCollider>());
-                interactionText.gameObject.SetActive(false);
-                tempInteraction.DrinkPoison();
-                tempInteraction = null;
-            }
-        }
+        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+        transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "Pickup")
+        if (other.gameObject.tag != "Pickup")
         {
             NarrativeTrigger hitTrigger = other.gameObject.GetComponent<NarrativeTrigger>();
 
@@ -115,45 +81,9 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        if(other.gameObject.tag == "NarrativeTrigger")
+        if (other.gameObject.tag == "NarrativeTrigger")
         {
             other.gameObject.GetComponent<TriggerNodeInfo>().InvokeTrigger();
         }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Pickup")
-        {
-            PickupController pickup = other.GetComponent<PickupController>();
-
-            canInteract = true;
-
-            interactionText.gameObject.SetActive(true);
-
-            if (pickup.pickupType == PickUpTypes.Poison)
-            {
-                interactionText.text = "Press 'E' to buy the poison";
-            }
-
-            currentPickup = pickup;
-        }
-        else if(other.gameObject.tag == "Interactable")
-        {
-            tempInteraction = other.GetComponent<TombeInteraction>();
-            canInteract = true;
-
-            interactionText.gameObject.SetActive(true);
-            interactionText.text = "Press 'E' to use the poison";
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (interactionText.gameObject.activeInHierarchy)
-        {
-            interactionText.gameObject.SetActive(false);
-        }
-        canInteract = false;
     }
 }

@@ -40,7 +40,7 @@ public class NodeBasedEditor : EditorWindow
 
     private GameObject nodesParent;
 
-    private float saveTime = 30;
+    private float saveTime = 120;
     private float nextSave = 0;
 
     [MenuItem("Window/Node Based Editor")]

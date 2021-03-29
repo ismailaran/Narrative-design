@@ -13,6 +13,8 @@ public class StoryManager: MonoBehaviour
     public List<AudioClip> marketStoryLines = new List<AudioClip>();
     public List<AudioClip> outroStoryLines = new List<AudioClip>();
 
+    [SerializeField] private GameObject startingDoor;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
@@ -75,6 +77,7 @@ public class StoryManager: MonoBehaviour
         yield return new WaitForSeconds(12);
         for (float i = 2; i >= 0; i -= Time.deltaTime)         {             panelImage.color = new Color(0, 0, 0, (i / 2));             yield return null;         }
         yield return new WaitForSeconds(2);
+        player.canMove = true;
         audioManager.PlayNarratorClip(introStoryLines[1]);
         yield return new WaitForSeconds(18);
         audioManager.PlayRomeoClip(introStoryLines[2]);
@@ -84,6 +87,7 @@ public class StoryManager: MonoBehaviour
         audioManager.PlayRomeoClip(introStoryLines[4]);
         yield return new WaitForSeconds(3);
         audioManager.PlayNarratorClip(introStoryLines[5]);
-        player.canMove = true;
+        startingDoor.GetComponent<Rigidbody>().AddForce(startingDoor.transform.forward * 300, ForceMode.Impulse);
+        startingDoor.GetComponent<Rigidbody>().AddExplosionForce(100f,  startingDoor.transform.position, 35f);
     }
 }
