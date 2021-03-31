@@ -8,6 +8,7 @@ TagManager:
   - Interactable
   - NarrativeTrigger
   - ObjectsParent
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX

@@ -119,6 +119,16 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.GetComponent<TriggerNodeInfo>().InvokeTrigger();
         }
+
+        if (other.gameObject.tag == "EnemyWeapon")
+        {
+            GuardController guard = other.gameObject.transform.root.gameObject.GetComponent<GuardController>();
+            if (guard.recovering)
+            {
+                //ROMEO GOT HIT
+                Debug.Log("RIP Romeo");
+            }
+        }
     }
 
     private void OnTriggerStay(Collider other)
