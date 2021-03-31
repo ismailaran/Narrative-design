@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float walkingSpeed = 7.5f;
+    public float walkingSpeed = 3.5f;
     [SerializeField] private float gravity = 20.0f;
     private Camera playerCamera;
     [SerializeField] private float lookSpeed = 2.0f;
@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
 
         //interactions
+        if (gameManager.playerHasSpeed) canInteract = true;
         if (Input.GetKeyDown(KeyCode.E) && canInteract)
         {
             if (currentPickup != null)
@@ -85,6 +86,15 @@ public class PlayerController : MonoBehaviour
                     currentPickup = null;
                     storyManager.PlayMarketStoryAudio();
                 }
+                if (currentPickup.pickupType == PickUpTypes.Speed_Potion)
+                {
+                    gameManager.playerHasSpeed = true;
+                    Debug.Log("Pickup speed potion");
+                    Destroy(currentPickup.gameObject);
+                    interactionText.gameObject.SetActive(false);
+                    currentPickup = null;
+                    storyManager.PlaySpeedPotionStoryAudio();
+                }
             }
             else if(tempInteraction != null)
             {
@@ -92,6 +102,11 @@ public class PlayerController : MonoBehaviour
                 interactionText.gameObject.SetActive(false);
                 tempInteraction.DrinkPoison();
                 tempInteraction = null;
+            }
+            else if (gameManager.playerHasSpeed)
+            {
+                canInteract = false;
+                gameManager.StartCoroutine("UseSpeedPotion");
             }
         }
     }
@@ -129,6 +144,12 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("RIP Romeo");
             }
         }
+
+        if(other.gameObject.tag == "Button" && !gameManager.calledGuards)
+        {
+            gameManager.calledGuards = true;
+            gameManager.CallGuards();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -144,6 +165,18 @@ public class PlayerController : MonoBehaviour
             if (pickup.pickupType == PickUpTypes.Poison)
             {
                 interactionText.text = "Press 'E' to buy the poison";
+            }
+            else if(pickup.pickupType == PickUpTypes.Speed_Potion)
+            {
+                if (gameManager.playerHasPoison)
+                {
+                    interactionText.text = "You don't have enough money to buy the speed potion.";
+                    canInteract = false;
+                }
+                else
+                {
+                    interactionText.text = "Press 'E' to buy the speed potion";
+                }
             }
 
             currentPickup = pickup;

@@ -9,6 +9,7 @@ TagManager:
   - NarrativeTrigger
   - ObjectsParent
   - EnemyWeapon
+  - Button
   layers:
   - Default
   - TransparentFX

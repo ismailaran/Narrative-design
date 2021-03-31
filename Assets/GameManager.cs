@@ -6,12 +6,17 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> pathBlockers = new List<GameObject>();
     private GameObject player;
+    [SerializeField]private Transform merchant;
 
     private Vector3 respawnLocation;
     public int timesFellOffMap { get { return fallCounter; } }
     private int fallCounter;
 
     public bool playerHasPoison = false;
+    public bool playerHasSpeed = false;
+
+    public bool calledGuards = false;
+    [SerializeField] GuardController guard;
 
     private StoryManager storyManager;
 
@@ -24,10 +29,10 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         respawnLocation = player.transform.position;
 
-        foreach(GameObject blocker in pathBlockers)
+        /*foreach(GameObject blocker in pathBlockers)
         {
             blocker.SetActive(false);
-        }
+        }*/
     }
 
     private void Update()
@@ -63,5 +68,22 @@ public class GameManager : MonoBehaviour
         {
             respawnLocation = location;
         }
+    }
+
+    public void CallGuards()
+    {
+        guard.chasing = true;
+        guard.target = player.transform;
+    }
+
+    public IEnumerator UseSpeedPotion()
+    {
+        playerHasSpeed = false;
+        guard.target = merchant;
+        PlayerController script = player.GetComponent<PlayerController>();
+        float startingSpeed = script.walkingSpeed;
+        script.walkingSpeed = 7;
+        yield return new WaitForSeconds(3);
+        script.walkingSpeed = startingSpeed;
     }
 }

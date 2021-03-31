@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class GuardController : MonoBehaviour
 {
-    private Transform target;
+    public Transform target;
     private NavMeshAgent agent;
     private Animator anim;
 
@@ -45,6 +45,12 @@ public class GuardController : MonoBehaviour
     {
         recovering = true;
         anim.Play("Attack");
+        if (target.name == "Merchant")
+        {
+            target.gameObject.GetComponent<Animator>().Play("Dead");
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+            chasing = false;
+        }
         yield return new WaitForSeconds(2);
         recovering = false;
     }

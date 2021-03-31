@@ -11,6 +11,7 @@ public class StoryManager: MonoBehaviour
 
     public List<AudioClip> introStoryLines = new List<AudioClip>();
     public List<AudioClip> marketStoryLines = new List<AudioClip>();
+    public List<AudioClip> speedPotionStoryLines = new List<AudioClip>();
     public List<AudioClip> outroStoryLines = new List<AudioClip>();
 
     [SerializeField] private GameObject startingDoor;
@@ -31,6 +32,12 @@ public class StoryManager: MonoBehaviour
     {
         player.canMove = false;
         StartCoroutine(playMarketStory());
+    }
+
+    public void PlaySpeedPotionStoryAudio()
+    {
+        player.canMove = false;
+        StartCoroutine(playSpeedPotionStory());
     }
 
     public void PlayOutroStoryAudio()
@@ -68,6 +75,19 @@ public class StoryManager: MonoBehaviour
         yield return new WaitForSeconds(5);
         audioManager.PlayNarratorClip(marketStoryLines[3]);
         yield return new WaitForSeconds(10);
+        player.canMove = true;
+    }
+
+    private IEnumerator playSpeedPotionStory()
+    {
+        /*audioManager.PlayRomeoClip(marketStoryLines[0]);
+        yield return new WaitForSeconds(3);
+        audioManager.PlayNarratorClip(marketStoryLines[1]);
+        yield return new WaitForSeconds(13);
+        audioManager.PlayRomeoClip(marketStoryLines[2]);
+        yield return new WaitForSeconds(5);
+        audioManager.PlayNarratorClip(marketStoryLines[3]);*/
+        yield return new WaitForSeconds(2);
         player.canMove = true;
     }
 

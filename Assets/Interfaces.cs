@@ -10,6 +10,7 @@ public interface Itriggerable
 public enum PickUpTypes
 {
     Poison,
+    Speed_Potion,
     Document
 }
 
