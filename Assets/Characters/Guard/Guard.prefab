@@ -386,6 +386,8 @@ GameObject:
   - component: {fileID: 5102224918353901093}
   - component: {fileID: 2930595478932608052}
   - component: {fileID: 2930595478932608053}
+  - component: {fileID: 371659444}
+  - component: {fileID: 371659446}
   m_Layer: 0
   m_Name: Guard
   m_TagString: Untagged
@@ -441,7 +443,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9549285622ce2b94da7ad3720efb8f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
   chasing: 0
+  recovering: 0
 --- !u!195 &2930595478932608053
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -452,7 +456,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -464,6 +468,33 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!135 &371659444
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974057678169503461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!136 &371659446
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974057678169503461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.7895898
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9052051, z: 0}
 --- !u!1 &2324791712611172044
 GameObject:
   m_ObjectHideFlags: 0
