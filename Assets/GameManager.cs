@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> pathBlockers = new List<GameObject>();
     private GameObject player;
     [SerializeField]private Transform merchant;
 
@@ -30,11 +29,6 @@ public class GameManager : MonoBehaviour
         storyManager = this.gameObject.GetComponent<StoryManager>();
         player = GameObject.FindGameObjectWithTag("Player");
         respawnLocation = player.transform.position;
-
-        /*foreach(GameObject blocker in pathBlockers)
-        {
-            blocker.SetActive(false);
-        }*/
     }
 
     private void Update()
@@ -46,17 +40,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void BlockPath(int id)
-    {
-        pathBlockers[id].SetActive(true);
-    }
-
     public void RespawnPlayer()
     {
         player.GetComponent<CharacterController>().enabled = false;
         player.transform.position = respawnLocation;
         player.GetComponent<CharacterController>().enabled = true;
         player.GetComponent<PlayerController>().moveDirection = Vector3.zero;
+        AddFallCount();
     }
 
     public void AddFallCount()
@@ -87,14 +77,10 @@ public class GameManager : MonoBehaviour
         Instantiate(parisRagdoll);
     }
 
-    public IEnumerator UseSpeedPotion()
+    public void UseSpeedPotion()
     {
         playerHasSpeed = false;
         guard.target = merchant;
-        PlayerController script = player.GetComponent<PlayerController>();
-        float startingSpeed = script.walkingSpeed;
-        script.walkingSpeed = 7;
-        yield return new WaitForSeconds(3);
-        script.walkingSpeed = startingSpeed;
+        storyManager.PlayPotionMarketAudio();
     }
 }

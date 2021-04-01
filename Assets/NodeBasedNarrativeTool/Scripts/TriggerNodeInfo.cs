@@ -96,6 +96,7 @@ public class TriggerNodeInfo : MonoBehaviour
             currentVoiceLine++;
             yield return new WaitForSeconds(delays[currentVoiceLine - 1]);
         }
+        audioManager.gameObject.GetComponent<GameManager>().SetNewRespawnLocation(this.transform.position);
         EnableNextTriggers();
     }
 

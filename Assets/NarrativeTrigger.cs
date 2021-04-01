@@ -29,11 +29,6 @@ public class NarrativeTrigger : MonoBehaviour, Itriggerable
     {
         isActivated = true;
 
-        if (hasBlockingEvent)
-        {
-            gameManager.BlockPath(blockerID);
-        }
-
         audioManager.PlayNarratorClip(narrativeLine);
 
         gameManager.SetNewRespawnLocation(this.transform.position);

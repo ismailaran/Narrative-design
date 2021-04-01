@@ -11,16 +11,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float lookSpeed = 2.0f;
     [SerializeField] private float lookXLimit = 45.0f;
 
-    private CharacterController characterController;
+    public CharacterController characterController;
     public Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
 
     private GameManager gameManager;
     private StoryManager storyManager;
-
-    private TombeInteraction tempInteraction;
+    
     private PickupController currentPickup;
     private bool canInteract = false;
+
+    private bool canGetTrueEnding = false;
+    private bool canDrinkPoison = true;
 
     [SerializeField] private Text interactionText;
 
@@ -86,34 +88,37 @@ public class PlayerController : MonoBehaviour
                     currentPickup = null;
                     storyManager.PlayMarketStoryAudio();
                 }
-                if (currentPickup.pickupType == PickUpTypes.Speed_Potion)
+                if (currentPickup.pickupType == PickUpTypes.Speed_Potion && storyManager.playedCreepyGuyIntro)
                 {
                     gameManager.playerHasSpeed = true;
-                    Debug.Log("Pickup speed potion");
                     Destroy(currentPickup.gameObject);
                     interactionText.gameObject.SetActive(false);
                     currentPickup = null;
                     storyManager.PlaySpeedPotionStoryAudio();
+                    //activate story node 14 and 6
+                    List<int> tempList = new List<int>();
+                    tempList.Add(6);
+                    tempList.Add(14);
+                    gameManager.gameObject.GetComponent<ConnectionsManager>().EnableTriggers(tempList);
                 }
-            }
-            else if(tempInteraction != null)
-            {
-                Destroy(tempInteraction.gameObject.GetComponent<SphereCollider>());
-                interactionText.gameObject.SetActive(false);
-                tempInteraction.DrinkPoison();
-                tempInteraction = null;
             }
             else if (gameManager.playerHasSpeed)
             {
                 canInteract = false;
-                gameManager.StartCoroutine("UseSpeedPotion");
+                gameManager.UseSpeedPotion();
+                canGetTrueEnding = true;
+            }
+            else if(canDrinkPoison)
+            {
+                interactionText.gameObject.SetActive(false);
+                storyManager.PlayOutroStoryAudio();
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "Pickup")
+        /*if(other.gameObject.tag != "Pickup")
         {
             NarrativeTrigger hitTrigger = other.gameObject.GetComponent<NarrativeTrigger>();
 
@@ -129,10 +134,15 @@ public class PlayerController : MonoBehaviour
                     trigger.TriggerEvent();
                 }
             }
-        }
+        }*/
         if(other.gameObject.tag == "NarrativeTrigger")
         {
             other.gameObject.GetComponent<TriggerNodeInfo>().InvokeTrigger();
+        }
+
+        if(other.gameObject.name == "Narrative_Trigger_MapEnd")
+        {
+            gameManager.RespawnPlayer();
         }
 
         if (other.gameObject.tag == "EnemyWeapon")
@@ -141,7 +151,9 @@ public class PlayerController : MonoBehaviour
             if (guard.recovering)
             {
                 //ROMEO GOT HIT
+                canMove = false;
                 Debug.Log("RIP Romeo");
+                storyManager.StartCoroutine("fadePanelToBlack");
             }
         }
 
@@ -159,6 +171,11 @@ public class PlayerController : MonoBehaviour
             gameManager.calledGuards = true;
             gameManager.CallGuards();
         }
+
+        if(other.gameObject.name == "EndingTrigger" && canGetTrueEnding)
+        {
+            storyManager.PlayTrueEndingAudio();
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -169,30 +186,46 @@ public class PlayerController : MonoBehaviour
 
             canInteract = true;
 
-            interactionText.gameObject.SetActive(true);
-
             if (pickup.pickupType == PickUpTypes.Poison)
             {
-                interactionText.text = "Press 'E' to buy the poison";
-            }
-            else if(pickup.pickupType == PickUpTypes.Speed_Potion)
-            {
-                if (gameManager.playerHasPoison)
+                if (gameManager.playerHasSpeed)
                 {
-                    interactionText.text = "You don't have enough money to buy the speed potion.";
+                    interactionText.gameObject.SetActive(true);
+                    interactionText.text = "You don't have enough money to buy the poison";
                     canInteract = false;
                 }
                 else
                 {
-                    interactionText.text = "Press 'E' to buy the speed potion";
+                    interactionText.gameObject.SetActive(true);
+                    interactionText.text = "Press 'E' to buy the poison";
+                }
+            }
+            else if(pickup.pickupType == PickUpTypes.Speed_Potion)
+            {
+                if (!storyManager.playedCreepyGuyIntro && !storyManager.playing)
+                {
+                    storyManager.PlayCreepyGuyIntro();
+                }
+                else if(storyManager.playedCreepyGuyIntro)
+                {
+                    if (gameManager.playerHasPoison)
+                    {
+                        interactionText.gameObject.SetActive(true);
+                        interactionText.text = "You don't have enough money to buy the invisibility potion.";
+                        canInteract = false;
+                    }
+                    else
+                    {
+                        interactionText.gameObject.SetActive(true);
+                        interactionText.text = "Press 'E' to buy the invisibility potion";
+                    }
                 }
             }
 
             currentPickup = pickup;
         }
-        else if(other.gameObject.tag == "Interactable")
+        else if(other.gameObject.tag == "Interactable" && gameManager.playerHasPoison)
         {
-            tempInteraction = other.GetComponent<TombeInteraction>();
             canInteract = true;
 
             interactionText.gameObject.SetActive(true);
