@@ -1206,6 +1206,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 43060661}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &46318281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46318282}
+  - component: {fileID: 46318284}
+  - component: {fileID: 46318283}
+  m_Layer: 0
+  m_Name: Generated_Node_14
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &46318282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46318281}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.27, y: 0, z: 172.23}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &46318283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46318281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 575
+    y: 758
+    width: 200
+    height: 250
+  ID: 14
+  stepDescription: Romeo returns with speed
+  showAudio: 0000000001
+  playedAudioClips:
+  - {fileID: 8300000, guid: 8a879b813346298499edb4511f2d41b7, type: 3}
+  - {fileID: 8300000, guid: 3d5068f9b6c13aa4586bc3e54aef1deb, type: 3}
+  - {fileID: 8300000, guid: 709ca8954bd939f4c8bc4a5fefc09833, type: 3}
+  - {fileID: 8300000, guid: c29fe2ba7c24fac45a2da335cf22bbc9, type: 3}
+  - {fileID: 8300000, guid: bd90cd23ae2d6ce4a815a6ae7656ca68, type: 3}
+  delays: 11000000060000000a0000000300000000000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections: []
+  pathType: 0
+  scrollViewVector: {x: 0, y: 31}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &46318284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46318281}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30, y: 10, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &47260921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3883,6 +3963,86 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 230900163}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &247460388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 247460389}
+  - component: {fileID: 247460391}
+  - component: {fileID: 247460390}
+  m_Layer: 0
+  m_Name: Generated_Node_16
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &247460389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247460388}
+  m_LocalRotation: {x: -0, y: 0.8020525, z: -0, w: 0.5972535}
+  m_LocalPosition: {x: -180.4, y: 12.5, z: 113.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 106.653, z: 0}
+--- !u!114 &247460390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247460388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1187
+    y: 758
+    width: 200
+    height: 250
+  ID: 16
+  stepDescription: Romeo enters juliets house
+  showAudio: 010101
+  playedAudioClips:
+  - {fileID: 8300000, guid: 0310e14a925a1fa43be89399430155f9, type: 3}
+  - {fileID: 8300000, guid: 4f30f22b85a07c540bca1fa4d90fc188, type: 3}
+  - {fileID: 8300000, guid: a74f90dd513e7ca4cb005400a06697d4, type: 3}
+  delays: 090000000300000000000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 15, y: 16}
+  - {x: 16, y: 17}
+  pathType: 2
+  scrollViewVector: {x: 0, y: 79}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &247460391
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247460388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &249274042
 GameObject:
   m_ObjectHideFlags: 0
@@ -5509,7 +5669,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d910ff014d5ea1468f30fee4c9bb347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connections: []
+  connections:
+  - inPointID: 1
+    outPointID: 2
+    connectionType: 1
+  - inPointID: 2
+    outPointID: 3
+    connectionType: 1
+  - inPointID: 3
+    outPointID: 4
+    connectionType: 2
+  - inPointID: 4
+    outPointID: 5
+    connectionType: 2
+  - inPointID: 5
+    outPointID: 6
+    connectionType: 2
+  - inPointID: 5
+    outPointID: 7
+    connectionType: 0
+  - inPointID: 7
+    outPointID: 6
+    connectionType: 2
+  - inPointID: 9
+    outPointID: 10
+    connectionType: 1
+  - inPointID: 10
+    outPointID: 11
+    connectionType: 1
+  - inPointID: 11
+    outPointID: 12
+    connectionType: 1
+  - inPointID: 12
+    outPointID: 13
+    connectionType: 1
+  - inPointID: 15
+    outPointID: 16
+    connectionType: 2
+  - inPointID: 16
+    outPointID: 17
+    connectionType: 2
   inactiveTriggers: []
 --- !u!1 &349103027
 GameObject:
@@ -5740,6 +5939,83 @@ CapsuleCollider:
   m_Height: 1.7895898
   m_Direction: 1
   m_Center: {x: 0, y: 0.9052051, z: 0}
+--- !u!1 &377338647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377338648}
+  - component: {fileID: 377338650}
+  - component: {fileID: 377338649}
+  m_Layer: 0
+  m_Name: Generated_Node_1
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377338648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377338647}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 17.24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377338649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377338647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1286
+    y: 442
+    width: 200
+    height: 250
+  ID: 1
+  stepDescription: Romeo walks out of the house
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: cf19150c5eedebc439e98b0e8248761e, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 1, y: 2}
+  pathType: 1
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &377338650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377338647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &377424931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5894,6 +6170,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 386109954}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &388138889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388138890}
+  - component: {fileID: 388138892}
+  - component: {fileID: 388138891}
+  m_Layer: 0
+  m_Name: Generated_Node_5
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &388138890
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388138889}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -87.3, y: 0, z: 199.65}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &388138891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388138889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -71
+    y: 572
+    width: 200
+    height: 250
+  ID: 5
+  stepDescription: Romeo continues to ignore
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: 8682dd40d1c7226478fafef77ef2c2be, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 4, y: 5}
+  - {x: 5, y: 6}
+  - {x: 5, y: 7}
+  pathType: 0
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &388138892
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388138889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &388267919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7451,6 +7806,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 501283888}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &502655810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 502655811}
+  - component: {fileID: 502655813}
+  - component: {fileID: 502655812}
+  m_Layer: 0
+  m_Name: Generated_Node_13
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &502655811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502655810}
+  m_LocalRotation: {x: -0, y: 0.22173125, z: -0, w: 0.97510785}
+  m_LocalPosition: {x: -186.08, y: -15.1, z: 218.95}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 25.621, z: 0}
+--- !u!114 &502655812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502655810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1688
+    y: 437
+    width: 200
+    height: 250
+  ID: 13
+  stepDescription: Romeo sees Juliet
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: f8046e4a20a71dd42b661e6ee1b68d91, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 12, y: 13}
+  pathType: 0
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &502655813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502655810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &503403180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12853,6 +13285,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 886241945}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &890922261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890922262}
+  - component: {fileID: 890922264}
+  - component: {fileID: 890922263}
+  m_Layer: 0
+  m_Name: Generated_Node_3
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890922262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890922261}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.45, y: 0, z: 163.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890922263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890922261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -683
+    y: 417
+    width: 200
+    height: 250
+  ID: 3
+  stepDescription: Romeo arrives at market
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: 4380e0694c56240469ceff707e36f02b, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 2, y: 3}
+  - {x: 3, y: 4}
+  pathType: 2
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &890922264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890922261}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40, y: 10, z: 30}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &898164744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14059,6 +14569,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1018861697}
   m_CullTransparentMesh: 1
+--- !u!1 &1024042954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1024042955}
+  - component: {fileID: 1024042957}
+  - component: {fileID: 1024042956}
+  m_Layer: 0
+  m_Name: Generated_Node_9
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1024042955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024042954}
+  m_LocalRotation: {x: -0, y: 0.8830045, z: -0, w: 0.4693647}
+  m_LocalPosition: {x: -112.74, y: 1.33, z: 255.15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 124.014, z: 0}
+--- !u!114 &1024042956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024042954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 517
+    y: 105
+    width: 200
+    height: 250
+  ID: 9
+  stepDescription: Arrive Tombe with poison
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: 28ca87fdd70c61f41ad86851185960ec, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 9, y: 10}
+  pathType: 1
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &1024042957
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1024042954}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1024691506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18866,6 +19453,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   narrativeLines: []
+--- !u!1 &1241773873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1241773874}
+  - component: {fileID: 1241773876}
+  - component: {fileID: 1241773875}
+  m_Layer: 0
+  m_Name: Generated_Node_17
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1241773874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241773873}
+  m_LocalRotation: {x: -0, y: 0.2613989, z: -0, w: 0.9652309}
+  m_LocalPosition: {x: -161.62, y: -10.45, z: 172.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 30.306, z: 0}
+--- !u!114 &1241773875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241773873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1482
+    y: 807
+    width: 200
+    height: 250
+  ID: 17
+  stepDescription: Romeo walks to the cellar
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: 8d9698be1d4663141b0ff26d6a261f43, type: 3}
+  delays: 0a000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 16, y: 17}
+  pathType: 0
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &1241773876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241773873}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1250442853
 GameObject:
   m_ObjectHideFlags: 0
@@ -19658,6 +20322,84 @@ Transform:
   m_Father: {fileID: 986113915}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1305145582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1305145583}
+  - component: {fileID: 1305145585}
+  - component: {fileID: 1305145584}
+  m_Layer: 0
+  m_Name: Generated_Node_4
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1305145583
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305145582}
+  m_LocalRotation: {x: -0, y: -0.67754906, z: -0, w: 0.73547757}
+  m_LocalPosition: {x: -37.73, y: 0, z: 185.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: -85.305, z: 0}
+--- !u!114 &1305145584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305145582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -393
+    y: 571
+    width: 200
+    height: 250
+  ID: 4
+  stepDescription: Romeo ignores the market
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: 25da7a61904697a458b5d0bc063c2382, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 3, y: 4}
+  - {x: 4, y: 5}
+  pathType: 2
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &1305145585
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305145582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1307519104
 GameObject:
   m_ObjectHideFlags: 0
@@ -20354,6 +21096,92 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1344753271}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1345575386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1345575387}
+  - component: {fileID: 1345575389}
+  - component: {fileID: 1345575388}
+  m_Layer: 0
+  m_Name: Generated_Node_6
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1345575387
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345575386}
+  m_LocalRotation: {x: -0, y: 0.18120128, z: -0, w: 0.98344606}
+  m_LocalPosition: {x: -177.38, y: -12.91, z: 264.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 20.879, z: 0}
+--- !u!114 &1345575388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345575386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 545
+    y: 408
+    width: 200
+    height: 250
+  ID: 6
+  stepDescription: Tombe without posion
+  showAudio: 000000000000000000
+  playedAudioClips:
+  - {fileID: 8300000, guid: a6c8ff90a66f3f2429f634b341dbc551, type: 3}
+  - {fileID: 8300000, guid: 920ebc5f9de07c646b82ca288a7f559e, type: 3}
+  - {fileID: 8300000, guid: 101e2f044789ea949941898a0361fa15, type: 3}
+  - {fileID: 8300000, guid: 77417557d4b4a9e478aa0a7f5132e665, type: 3}
+  - {fileID: 8300000, guid: 45ddb8d17e2c1b24a863a789a381676b, type: 3}
+  - {fileID: 8300000, guid: 3290bccd4058a214ab62f405a2841a24, type: 3}
+  - {fileID: 8300000, guid: b077cf3bf6191d040b8a76883882b95b, type: 3}
+  - {fileID: 8300000, guid: a5317f0b274869640a459aa413a511c2, type: 3}
+  - {fileID: 8300000, guid: d04c0bda41b979a4680ad6abd30a13ca, type: 3}
+  delays: 0e0000000300000005000000040000000400000004000000040000000300000000000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 5, y: 6}
+  - {x: 7, y: 6}
+  pathType: 0
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &1345575389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345575386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1352103805
 GameObject:
   m_ObjectHideFlags: 0
@@ -24397,6 +25225,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1603884013}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1610089675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610089676}
+  - component: {fileID: 1610089678}
+  - component: {fileID: 1610089677}
+  m_Layer: 0
+  m_Name: Generated_Node_7
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1610089676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610089675}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -102.44, y: 1.67, z: 255.33}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1610089677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610089675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 712
+    width: 200
+    height: 250
+  ID: 7
+  stepDescription: Romeo meets creepy guy
+  showAudio: 0101
+  playedAudioClips:
+  - {fileID: 8300000, guid: ac56e1a8fe1a8794793e5963050029d4, type: 3}
+  - {fileID: 8300000, guid: 284560ee6434b844495cae578fa50805, type: 3}
+  delays: 0a00000000000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 5, y: 7}
+  - {x: 7, y: 6}
+  pathType: 2
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &1610089678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610089675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 5, z: 3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1647631312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25076,6 +25983,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1699456281}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1705804324
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1705804325}
+  - component: {fileID: 1705804327}
+  - component: {fileID: 1705804326}
+  m_Layer: 0
+  m_Name: Generated_Node_10
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1705804325
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705804324}
+  m_LocalRotation: {x: -0, y: -0.5527954, z: -0, w: 0.83331704}
+  m_LocalPosition: {x: -163.14, y: -8.16, z: 280.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: -67.118, z: 0}
+--- !u!114 &1705804326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705804324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 810
+    y: 84
+    width: 200
+    height: 250
+  ID: 10
+  stepDescription: Romeo goes into the tombe
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: b0b50bcabdaa84f4186a6f71209557c6, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 9, y: 10}
+  - {x: 10, y: 11}
+  pathType: 1
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &1705804327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705804324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1720836152
 GameObject:
   m_ObjectHideFlags: 0
@@ -28188,6 +29173,86 @@ Transform:
   m_Father: {fileID: 698540789}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -63.128002, z: 0}
+--- !u!1 &1940806247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940806248}
+  - component: {fileID: 1940806250}
+  - component: {fileID: 1940806249}
+  m_Layer: 0
+  m_Name: Generated_Node_15
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1940806248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940806247}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -44.8, y: 0, z: 142.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1940806249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940806247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 883
+    y: 640
+    width: 200
+    height: 250
+  ID: 15
+  stepDescription: Romeo runs to the castle
+  showAudio: 00000001
+  playedAudioClips:
+  - {fileID: 8300000, guid: 4cf43a0ae7ecf664da70d9c6f5e9d1bb, type: 3}
+  - {fileID: 8300000, guid: f0cbfd4058f21de40866640560681438, type: 3}
+  - {fileID: 8300000, guid: 7576adc8021dbac42b7cbc0d48e5cfc8, type: 3}
+  - {fileID: 8300000, guid: 3808e4b862c1b604dab33db189ebabe3, type: 3}
+  delays: 0d000000050000000800000000000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 15, y: 16}
+  pathType: 2
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &1940806250
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940806247}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1948197115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28368,7 +29433,23 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 377338648}
+  - {fileID: 2075229334}
+  - {fileID: 890922262}
+  - {fileID: 1305145583}
+  - {fileID: 388138890}
+  - {fileID: 1345575387}
+  - {fileID: 1610089676}
+  - {fileID: 1024042955}
+  - {fileID: 1705804325}
+  - {fileID: 2001851294}
+  - {fileID: 2079901540}
+  - {fileID: 502655811}
+  - {fileID: 46318282}
+  - {fileID: 1940806248}
+  - {fileID: 247460389}
+  - {fileID: 1241773874}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28795,6 +29876,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2000239547}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2001851293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2001851294}
+  - component: {fileID: 2001851296}
+  - component: {fileID: 2001851295}
+  m_Layer: 0
+  m_Name: Generated_Node_11
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2001851294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001851293}
+  m_LocalRotation: {x: -0, y: 0.17127027, z: -0, w: 0.9852241}
+  m_LocalPosition: {x: -177.81, y: -13.7, z: 263.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 19.723, z: 0}
+--- !u!114 &2001851295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001851293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1103
+    y: 81
+    width: 200
+    height: 250
+  ID: 11
+  stepDescription: Romeo sees Paris
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: a4b66c4289e9a8640960e341f8f7c462, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 10, y: 11}
+  - {x: 11, y: 12}
+  pathType: 1
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &2001851296
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001851293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2006179011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29960,6 +31119,162 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2072855812}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2075229333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2075229334}
+  - component: {fileID: 2075229336}
+  - component: {fileID: 2075229335}
+  m_Layer: 0
+  m_Name: Generated_Node_2
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2075229334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075229333}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.51, y: 0, z: 59.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2075229335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075229333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -967
+    y: 253
+    width: 200
+    height: 250
+  ID: 2
+  stepDescription: Romeo goes right
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: 2cbfef3084802c243bc46f68901ab932, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 1, y: 2}
+  - {x: 2, y: 3}
+  pathType: 1
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &2075229336
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075229333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &2079901539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2079901540}
+  - component: {fileID: 2079901542}
+  - component: {fileID: 2079901541}
+  m_Layer: 0
+  m_Name: Generated_Node_12
+  m_TagString: NarrativeTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2079901540
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079901539}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -178.94, y: -15.64, z: 242.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1949138408}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2079901541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079901539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ea38c194623864c9e9285949d3fefb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1353
+    y: 344
+    width: 200
+    height: 250
+  ID: 12
+  stepDescription: Romeo kills Paris
+  showAudio: 01
+  playedAudioClips:
+  - {fileID: 8300000, guid: 8cdb0907638fbac4dbba4c9e7e7644f2, type: 3}
+  delays: 00000000
+  isDragged: 0
+  isSelected: 0
+  nodeConnections:
+  - {x: 11, y: 12}
+  - {x: 12, y: 13}
+  pathType: 1
+  scrollViewVector: {x: 0, y: 0}
+  worldPosition: {x: 0, y: 0, z: 0}
+  hasBeenActivated: 0
+--- !u!65 &2079901542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079901539}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 4, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2091727325
 PrefabInstance:
   m_ObjectHideFlags: 0
