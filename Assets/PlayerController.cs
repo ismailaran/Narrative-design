@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     private bool canGetTrueEnding = false;
     private bool canDrinkPoison = true;
 
+    private bool ending = false;
+
     [SerializeField] private Text interactionText;
 
     [HideInInspector] public bool canMove = true;
@@ -110,6 +112,7 @@ public class PlayerController : MonoBehaviour
             }
             else if(canDrinkPoison)
             {
+                ending = true;
                 interactionText.gameObject.SetActive(false);
                 storyManager.PlayOutroStoryAudio();
             }
@@ -118,23 +121,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        /*if(other.gameObject.tag != "Pickup")
-        {
-            NarrativeTrigger hitTrigger = other.gameObject.GetComponent<NarrativeTrigger>();
-
-            if (hitTrigger != null && !hitTrigger.isActivated)
-            {
-                hitTrigger.TriggerEvent();
-            }
-            else if (hitTrigger == null)
-            {
-                Itriggerable trigger = other.gameObject.GetComponent<RespawnTrigger>();
-                if (trigger != null)
-                {
-                    trigger.TriggerEvent();
-                }
-            }
-        }*/
         if(other.gameObject.tag == "NarrativeTrigger")
         {
             other.gameObject.GetComponent<TriggerNodeInfo>().InvokeTrigger();
@@ -226,10 +212,14 @@ public class PlayerController : MonoBehaviour
         }
         else if(other.gameObject.tag == "Interactable" && gameManager.playerHasPoison)
         {
-            canInteract = true;
+            if (!ending)
+            {
+                canInteract = true;
 
-            interactionText.gameObject.SetActive(true);
-            interactionText.text = "Press 'E' to use the poison";
+                interactionText.gameObject.SetActive(true);
+                interactionText.text = "Press 'E' to use the poison";
+            }
+                
         }
     }
 
@@ -240,5 +230,6 @@ public class PlayerController : MonoBehaviour
             interactionText.gameObject.SetActive(false);
         }
         canInteract = false;
+        currentPickup = null;
     }
 }

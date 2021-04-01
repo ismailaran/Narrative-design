@@ -71,6 +71,13 @@ public class StoryManager: MonoBehaviour
         StartCoroutine(playCreepyGuyStory());
     }
 
+    public void RedoIntro()
+    {
+        player.canMove = false;
+        panelImage.color = new Color(0, 0, 0, 255);
+        StartCoroutine(fadePanelFromBlack());
+    }
+
     private IEnumerator playMarketPotionStory()
     {
         audioManager.PlayNarratorClip(marketPotionStoryLines[0]);
@@ -168,8 +175,6 @@ public class StoryManager: MonoBehaviour
 
     private IEnumerator playOutroStory()
     {
-        audioManager.PlayNarratorClip(outroStoryLines[3]);
-        yield return new WaitForSeconds(6);
         audioManager.PlayNarratorClip(outroStoryLines[4]);
         yield return new WaitForSeconds(14);
         audioManager.PlayRomeoClip(outroStoryLines[5]);
@@ -210,6 +215,11 @@ public class StoryManager: MonoBehaviour
         for (float i = 0; i <= 2; i += Time.deltaTime)         {             panelImage.color = new Color(0, 0, 0, (i / 2));             yield return null;         }
         yield return new WaitForSeconds(5);
         Application.Quit();
+    }
+
+    private IEnumerator fadePanelFromBlack()
+    {
+        for (float i = 2; i >= 0; i -= Time.deltaTime)         {             panelImage.color = new Color(0, 0, 0, (i / 2));             yield return null;         }
     }
 
     private IEnumerator playIntroStory()

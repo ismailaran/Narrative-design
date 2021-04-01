@@ -9097,6 +9097,7 @@ MonoBehaviour:
   guard: {fileID: 2930595478932608052}
   parisRagdoll: {fileID: 6339184669192574283, guid: b697795ec41f3234089d24fb6492e3a5,
     type: 3}
+  glitchPadLines: []
 --- !u!114 &347554516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9145,10 +9146,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 04de9521288761e49bd5f55a69e70a28, type: 3}
   - {fileID: 8300000, guid: 4e7e32f13e326e549b29d3587662b40d, type: 3}
   outroStoryLines:
-  - {fileID: 8300000, guid: 28ca87fdd70c61f41ad86851185960ec, type: 3}
-  - {fileID: 8300000, guid: b0b50bcabdaa84f4186a6f71209557c6, type: 3}
-  - {fileID: 8300000, guid: a4b66c4289e9a8640960e341f8f7c462, type: 3}
-  - {fileID: 8300000, guid: 8cdb0907638fbac4dbba4c9e7e7644f2, type: 3}
   - {fileID: 8300000, guid: f8046e4a20a71dd42b661e6ee1b68d91, type: 3}
   - {fileID: 8300000, guid: c7a12534649e4e449a033faf66bbcf7c, type: 3}
   - {fileID: 8300000, guid: 94c1505518cc7934eb4ea3e0bb425bcf, type: 3}
@@ -35003,8 +35000,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.4530214, y: 1, z: 0.60734636}
+  m_Center: {x: 0.2734892, y: 0, z: -0.19632629}
 --- !u!4 &1239239214
 Transform:
   m_ObjectHideFlags: 0
@@ -35013,7 +35010,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239239212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -93.62964, y: -16.7, z: 107.031395}
+  m_LocalPosition: {x: -93.62964, y: -16.7, z: 292.2}
   m_LocalScale: {x: 700, y: 10, z: 700}
   m_Children: []
   m_Father: {fileID: 1540946779}
