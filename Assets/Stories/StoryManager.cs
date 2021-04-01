@@ -96,8 +96,8 @@ public class StoryManager: MonoBehaviour
         audioManager.PlayNarratorClip(introStoryLines[0]);
         yield return new WaitForSeconds(12);
         for (float i = 2; i >= 0; i -= Time.deltaTime)         {             panelImage.color = new Color(0, 0, 0, (i / 2));             yield return null;         }
-        yield return new WaitForSeconds(2);
         player.canMove = true;
+        yield return new WaitForSeconds(2);
         audioManager.PlayNarratorClip(introStoryLines[1]);
         yield return new WaitForSeconds(18);
         audioManager.PlayRomeoClip(introStoryLines[2]);

@@ -145,6 +145,15 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if(other.gameObject.name == "Paris")
+        {
+            gameManager.KillParis(other.gameObject);
+        }
+        if(other.gameObject.name == "Guard")
+        {
+            gameManager.CallGuards();
+        }
+
         if(other.gameObject.tag == "Button" && !gameManager.calledGuards)
         {
             gameManager.calledGuards = true;

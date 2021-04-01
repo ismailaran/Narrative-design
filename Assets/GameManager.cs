@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     private bool hasStarted = false;
 
+    [SerializeField] private GameObject parisRagdoll;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,15 @@ public class GameManager : MonoBehaviour
     {
         guard.chasing = true;
         guard.target = player.transform;
+    }
+
+    public void KillParis(GameObject paris)
+    {
+        parisRagdoll.transform.position = paris.transform.position;
+        parisRagdoll.transform.rotation = paris.transform.rotation;
+
+        Destroy(paris);
+        Instantiate(parisRagdoll);
     }
 
     public IEnumerator UseSpeedPotion()
