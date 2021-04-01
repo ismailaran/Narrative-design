@@ -66,7 +66,12 @@ public class GameManager : MonoBehaviour
                 storyManager.RedoIntro();
                 redoneIntro = true;
                 //beging story again
+                player.GetComponent<CharacterController>().enabled = false;
+                player.transform.position = new Vector3(0,1.55f,-11.47f);
+                player.GetComponent<CharacterController>().enabled = true;
+                player.GetComponent<PlayerController>().moveDirection = Vector3.zero;
                 StartCoroutine(redoneStory());
+                return;
             }
         }
         else
@@ -84,7 +89,39 @@ public class GameManager : MonoBehaviour
     private IEnumerator redoneStory()
     {
         audioManager.PlayNarratorClip(glitchPadLines[3]);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(18);
+        audioManager.PlayNarratorClip(glitchPadLines[4]);
+        yield return new WaitForSeconds(4);
+        audioManager.PlayNarratorClip(glitchPadLines[5]);
+        yield return new WaitForSeconds(7);
+        audioManager.PlayNarratorClip(glitchPadLines[6]);
+        yield return new WaitForSeconds(4);
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.position = new Vector3(-190, 11f, 135);
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<PlayerController>().moveDirection = Vector3.zero;
+        audioManager.PlayNarratorClip(glitchPadLines[7]);
+        yield return new WaitForSeconds(7);
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.position = new Vector3(-91, 1.55f, -4.5f);
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<PlayerController>().moveDirection = Vector3.zero;
+
+        //activate story node 4
+        List<int> tempList = new List<int>();
+        tempList.Add(4);
+        this.gameObject.GetComponent<ConnectionsManager>().EnableTriggers(tempList);
+
+        audioManager.PlayNarratorClip(glitchPadLines[8]);
+        yield return new WaitForSeconds(7);
+        audioManager.PlayNarratorClip(glitchPadLines[9]);
+        yield return new WaitForSeconds(4);
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.position = new Vector3(-6.5f, 1.55f, 165);
+        player.GetComponent<CharacterController>().enabled = true;
+        player.GetComponent<PlayerController>().moveDirection = Vector3.zero;
+        audioManager.PlayNarratorClip(glitchPadLines[10]);
+        yield return new WaitForSeconds(8);
     }
 
     public void AddFallCount()

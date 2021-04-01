@@ -73,7 +73,6 @@ public class StoryManager: MonoBehaviour
 
     public void RedoIntro()
     {
-        player.canMove = false;
         panelImage.color = new Color(0, 0, 0, 255);
         StartCoroutine(fadePanelFromBlack());
     }
@@ -175,11 +174,11 @@ public class StoryManager: MonoBehaviour
 
     private IEnumerator playOutroStory()
     {
-        audioManager.PlayNarratorClip(outroStoryLines[4]);
+        audioManager.PlayNarratorClip(outroStoryLines[0]);
         yield return new WaitForSeconds(14);
-        audioManager.PlayRomeoClip(outroStoryLines[5]);
+        audioManager.PlayRomeoClip(outroStoryLines[1]);
         yield return new WaitForSeconds(1);
-        audioManager.PlayNarratorClip(outroStoryLines[6]);
+        audioManager.PlayNarratorClip(outroStoryLines[2]);
         yield return new WaitForSeconds(20);
         StartCoroutine(fadePanelToBlack());
     }
